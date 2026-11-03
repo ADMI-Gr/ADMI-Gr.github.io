@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMI · Apps</title>
+    <meta name="description" content="Apps de ADMI: herramientas web con una sola cuenta.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+</head>
+<body>
+    <header class="hero">
+        <nav class="topnav">
+            <span class="wordmark">ADMI</span>
+            <div class="session" id="session" hidden>
+                <span class="session-user"><i class="fas fa-user-circle"></i> <span id="sessionName"></span></span>
+                <button type="button" class="link-btn" id="signOutBtn">Cerrar sesión</button>
+            </div>
+        </nav>
+        <div class="hero-body">
+            <h1>ADMI</h1>
+            <p class="tagline">Herramientas web hechas a la medida. Una sola cuenta para todas.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-head">
+            <h2>Apps</h2>
+            <p class="section-hint" id="sectionHint">Entra a cualquier app con tu cuenta ADMI.</p>
+        </div>
+        <div class="apps-grid" id="appsGrid" aria-busy="true">
+            <div class="app-card skeleton"></div>
+            <div class="app-card skeleton"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <span>© <span id="year"></span> ADMI</span>
+        <a href="https://github.com/ADMI-Gr" rel="noopener"><i class="fab fa-github"></i> ADMI-Gr</a>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
